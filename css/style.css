@@ -1,0 +1,35 @@
+#sliderContainer {
+    width: 960px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    width: 480px;
+}
+
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    height: 960px;
+    border: 15px solid red;
+    border-style: solid;
+
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+   
+}
+
+.hovered {
+    background-color: black;
+}
+
+.box {
+    flex-grow: 1;
+}

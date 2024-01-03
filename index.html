@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <title>Desmond's Etch-A-Sketch</title>
+</head>
+<body>
+    <h1>Etch-A-Sketch</h1>
+    <div id="sliderContainer">
+        <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
+        <span id="sliderValue"></span>
+    </div>
+    <div id="container">
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+        <div class="row">
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+            <div class="box"> </div>
+        </div>
+    </div>
+</body>
+</html>
