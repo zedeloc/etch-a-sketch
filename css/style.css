@@ -1,3 +1,8 @@
+body {
+    width: 1000px;
+    text-align: center;
+}
+
 #sliderContainer {
     width: 960px;
     display: flex;
@@ -8,7 +13,11 @@
     width: 480px;
 }
 
-
+button,
+span {
+    padding: 10px;
+    margin: 10px;
+}
 
 #container {
     display: flex;
@@ -24,10 +33,6 @@
     display: flex;
     flex-grow: 1;
    
-}
-
-.hovered {
-    background-color: black;
 }
 
 .box {

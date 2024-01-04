@@ -1,4 +1,14 @@
 const container = document.getElementById('container');
+const toggleColor = document.querySelector('.toggleColor');
+let setting = 'black';
+toggleColor.addEventListener('click', () => {
+    if (setting === 'black') {
+        setting = 'rainbow';
+    } else {
+        setting = 'black';
+    }
+
+})
 const slider = document.getElementById("myRange");
 // display and update slider value
 const sliderValue = document.getElementById("sliderValue");
@@ -11,6 +21,7 @@ slider.addEventListener('change', function (e) {
     populatePixels(e.target.value);
     boxes = document.querySelectorAll('.box');
     listenForBoxes();
+
 })
 
 
@@ -18,6 +29,7 @@ slider.addEventListener('change', function (e) {
 let boxes = document.querySelectorAll(".box");
 // boxes change color when hovered
 listenForBoxes();
+
 
 function populatePixels(amount) {
     container.replaceChildren();
@@ -39,7 +51,29 @@ function populatePixels(amount) {
 function listenForBoxes() {
     boxes.forEach((box) => {
         box.addEventListener('mouseover', () => {
-            box.classList.add('hovered');
+            if (setting === 'black') {
+                box.style.backgroundColor = "rgb(0, 0 , 0)";
+
+            } else {
+                box.style.backgroundColor = randomRGB();
+            }
+            
         })
     })
+}
+
+// function listenForBoxesGray() {
+//     hsl(0, 0%, 0%);
+    
+// }
+
+function randomWholeNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function randomRGB() {
+    const r = randomWholeNumber(0, 255);
+    const g = randomWholeNumber(0, 255);
+    const b = randomWholeNumber(0, 255);
+    return `rgb(${r}, ${g}, ${b})`;
 }
