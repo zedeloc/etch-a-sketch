@@ -60,8 +60,8 @@
 }
 
 .pixel {
-    min-width: 8px;
-    min-height: 8px;
+    min-width: 4px;
+    min-height: 4px;
     background-color: lightgray;
     border: 1px solid darkgreen;
     /* flex-grow: 1; */

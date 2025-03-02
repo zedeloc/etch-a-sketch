@@ -4,6 +4,7 @@ const button = document.querySelector("#clear-all");
 
 button.addEventListener('click', () => {
     clearPixelGrid();
+    createPixelGrid(slider.value)
 })
 slider.addEventListener("input", () => {
     createPixelGrid(slider.value)
