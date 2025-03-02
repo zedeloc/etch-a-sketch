@@ -2,10 +2,13 @@ const pixelCanvas = document.querySelector("#pixel-canvas");
 const slider = document.querySelector(".slider");
 const button = document.querySelector("#clear-all");
 
+// clear pixel grid button
 button.addEventListener('click', () => {
     clearPixelGrid();
     createPixelGrid(slider.value)
 })
+
+// make grid based upon slider value
 slider.addEventListener("input", () => {
     createPixelGrid(slider.value)
 })

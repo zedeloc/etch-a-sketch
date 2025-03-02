@@ -60,6 +60,8 @@ h1 {
 }
 
 #pixel-canvas {
+    width: 680px;
+    height: 680px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -77,14 +79,18 @@ h1 {
 
 .pixel-row {
     display: flex;
+    margin: 0;
+    flex: 1 0 auto;
+    width: auto;
+    justify-content: stretch;
+    align-items: stretch;
 }
 
 .pixel {
-    min-width: 5px;
-    min-height: 5px;
+    
     background-color: lightgray;
     border: 1px solid rgb(0, 60, 0);
-    /* flex-grow: 1; */
+    flex: 1 1;
 }
 
 .pixel-hov {
