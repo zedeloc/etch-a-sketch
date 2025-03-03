@@ -3,6 +3,11 @@ const slider = document.querySelector(".slider");
 const button = document.querySelector("#clear-all");
 const classicClick = document.querySelector("#classic")
 const rainbowClick = document.querySelector("#rainbow")
+
+const displayPixelAmount = document.querySelector("#display-pixel-amount");
+
+displayPixelAmount.textContent = slider.value + " x " + slider.value;
+
 // set default
 let brushStroke = "classic";
 
@@ -24,6 +29,7 @@ button.addEventListener('click', () => {
 // make grid based upon slider value
 slider.addEventListener("input", () => {
     createPixelGrid(slider.value)
+    displayPixelAmount.textContent = slider.value + " x " + slider.value;
 })
 
 function createPixelRow(pixelQty) {
