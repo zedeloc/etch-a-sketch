@@ -43,6 +43,9 @@ function createPixelRow(pixelQty) {
     pixelCanvas.append(newRow);
 }
 
+// Unfortunately this is not very clear. Function creates the grid and puts
+// event listeners on each "pixel". The event listener function determines what color
+// to choose, but perhaps this color choice needs it's own function
 function createPixelGrid(num) {
     clearPixelGrid()
     for (let i = num; i > 0; i--) {
@@ -86,4 +89,5 @@ function randInt(max) {
     return result;
 }
 
+// set initial state
 createPixelGrid(32)
