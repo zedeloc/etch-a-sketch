@@ -12,17 +12,24 @@
     <div id="header"><h1>To Etch-a-Sketch you must sketch your etch.</h1></div>
     <div id="main-l2r">
         <div id="options">
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
-        <div id="main-t2b">
+            <form><fieldset>
+                <legend>Choose Brushstroke:</legend>
+                <div>
+                    <input type="radio" id="classic" name="brush-stroke" value="classic" checked>
+                    <label for="classic">Classic</label>
+                    <input type="radio" id="rainbow" name="brush-stroke" value="rainbow"> 
+                    <label for="rainbow">Rainbow</label>
+                </div>
+            </fieldset>
+            </form>
+            <p>Pixel Amount:</p>
             <div class="slidecontainer">
                 <input type="range" min="2" max="100" value="32" class="slider" id="myRange">
             </div>
             <button id="clear-all">CLEAR CANVAS</button>
+        </div>
+        <div id="main-t2b">
+            
             <div id="pixel-canvas"></div>
         </div>
         <div id="right-space"></div>

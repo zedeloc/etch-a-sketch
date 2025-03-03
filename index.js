@@ -1,6 +1,19 @@
 const pixelCanvas = document.querySelector("#pixel-canvas");
 const slider = document.querySelector(".slider");
 const button = document.querySelector("#clear-all");
+const classicClick = document.querySelector("#classic")
+const rainbowClick = document.querySelector("#rainbow")
+// set default
+let brushStroke = "classic";
+
+
+// select brush stroke
+classicClick.addEventListener("click", () => {
+    brushStroke = "classic";
+})
+rainbowClick.addEventListener("click", () => {
+    brushStroke = "rainbow";
+})
 
 // clear pixel grid button
 button.addEventListener('click', () => {
@@ -12,7 +25,6 @@ button.addEventListener('click', () => {
 slider.addEventListener("input", () => {
     createPixelGrid(slider.value)
 })
-
 
 function createPixelRow(pixelQty) {
     let newRow = document.createElement("div");
@@ -34,7 +46,12 @@ function createPixelGrid(num) {
 
     pixels.forEach((pixel) => {
             pixel.addEventListener("mouseover", () => {
-                pixel.classList.add("pixel-hov");
+                if (brushStroke === "rainbow") {
+
+                    pixel.style.backgroundColor = generateRandomHexColor();
+                } else if (brushStroke === "classic") {
+                    pixel.style.backgroundColor = 'darkgreen';
+            }
             })
         }) 
 }
@@ -45,6 +62,22 @@ function clearPixelGrid() {
     for (let i = rowsToDelete; i > 0; i--) {
         pixelCanvas.removeChild(pixelCanvas.lastChild);
     }
+}
+
+function generateRandomHexColor() {
+    let hexCode = "#"
+    const hexArray = ["0", "1", "2", "3", "4", "5", "6", 
+        "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+    
+    for (let i = 0; i < 6; i++) {
+        hexCode += hexArray[randInt(16)]
+    }
+    return hexCode;
+}
+
+function randInt(max) {
+    result = Math.floor(Math.random() * (max + 1));
+    return result;
 }
 
 createPixelGrid(32)
