@@ -76,7 +76,7 @@ function generateRandomHexColor() {
         "7", "8", "9", "a", "b", "c", "d", "e", "f"];
     
     for (let i = 0; i < 6; i++) {
-        hexCode += hexArray[randInt(16)]
+        hexCode += hexArray[randInt(15)]
     }
     return hexCode;
 }
